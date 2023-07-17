@@ -43,37 +43,35 @@ const Calculator = () => {
     };
 
     return (
-        <div className='wrapper'>
-            <div className='calculator'>
-                <div className='display'>{displayValue}</div>
-                <div className='buttons'>
-                    <div className='column'>
-                        <button onClick={() => handleNumberClick('7')}>7</button>
-                        <button onClick={() => handleNumberClick('4')}>4</button>
-                        <button onClick={() => handleNumberClick('1')}>1</button>
-                        <button onClick={() => handleNumberClick('0')}>0</button>
-                    </div>
-                    <div className='column'>
-                        <button onClick={() => handleNumberClick('8')}>8</button>
-                        <button onClick={() => handleNumberClick('5')}>5</button>
-                        <button onClick={() => handleNumberClick('2')}>2</button>
-                        <button onClick={() => handleNumberClick('.')}>.</button>
-                    </div>
-                    <div className='column'>
-                        <button onClick={() => handleNumberClick('9')}>9</button>
-                        <button onClick={() => handleNumberClick('6')}>6</button>
-                        <button onClick={() => handleNumberClick('3')}>3</button>
-                        <button onClick={handleEqualsClick}>=</button>
-                    </div>
-                    <div className='column'>
-                        <button className='symbol' onClick={() => handleOperatorClick('/')}>÷</button>
-                        <button className='symbol' onClick={() => handleOperatorClick('x')}>x</button>
-                        <button className='symbol' onClick={() => handleOperatorClick('-')}>-</button>
-                        <button className='symbol' onClick={() => handleOperatorClick('+')}>+</button>
-                    </div>
-                    <div className='column'>
-                        <button onClick={handleClearClick} className='clear-button'>AC</button>
-                    </div>
+        <div className='calculator'>
+            <div className='display'>{displayValue}</div>
+            <div className='buttons'>
+                <div className='column'>
+                    <button onClick={() => handleNumberClick('7')}>7</button>
+                    <button onClick={() => handleNumberClick('4')}>4</button>
+                    <button onClick={() => handleNumberClick('1')}>1</button>
+                    <button onClick={() => handleNumberClick('0')}>0</button>
+                </div>
+                <div className='column'>
+                    <button onClick={() => handleNumberClick('8')}>8</button>
+                    <button onClick={() => handleNumberClick('5')}>5</button>
+                    <button onClick={() => handleNumberClick('2')}>2</button>
+                    <button onClick={() => handleNumberClick('.')}>.</button>
+                </div>
+                <div className='column'>
+                    <button onClick={() => handleNumberClick('9')}>9</button>
+                    <button onClick={() => handleNumberClick('6')}>6</button>
+                    <button onClick={() => handleNumberClick('3')}>3</button>
+                    <button onClick={handleEqualsClick}>=</button>
+                </div>
+                <div className='column'>
+                    <button className='symbol' onClick={() => handleOperatorClick('/')}>÷</button>
+                    <button className='symbol' onClick={() => handleOperatorClick('x')}>x</button>
+                    <button className='symbol' onClick={() => handleOperatorClick('-')}>-</button>
+                    <button className='symbol' onClick={() => handleOperatorClick('+')}>+</button>
+                </div>
+                <div className='column'>
+                    <button onClick={handleClearClick} className='clear-button'>AC</button>
                 </div>
             </div>
         </div>

@@ -1,0 +1,10 @@
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    margin: 0;
+    font-size: 190px;
+    font-family: Arial, Helvetica, sans-serif;
+}

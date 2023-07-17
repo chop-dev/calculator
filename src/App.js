@@ -1,9 +1,11 @@
 import Calculator from './Calculator'
+import Title from './Title'
 
 function App() {
   return (
     <>
-      <Calculator></Calculator>
+      <Title />
+      <Calculator />
     </>
   );
 }
