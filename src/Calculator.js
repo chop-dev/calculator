@@ -2,26 +2,31 @@ import React, { useState } from 'react';
 import './Calculator.css';
 
 const Calculator = () => {
+    // Declare useStates for the calculator
     const [displayValue, setDisplayValue] = useState('0');
     const [storedValue, setStoredValue] = useState(null);
     const [operator, setOperator] = useState(null);
 
+    // Handle the number button click
     const handleNumberClick = (number) => {
         setDisplayValue((prevDisplayValue) =>
             prevDisplayValue === '0' ? number : prevDisplayValue + number
         );
     };
 
+    // Handle the operator button click 
     const handleOperatorClick = (op) => {
         setOperator(op);
         setStoredValue(displayValue);
         setDisplayValue('0');
     };
 
+    // Handle the equal button click
     const handleEqualsClick = () => {
         const currentValue = parseFloat(displayValue);
         const stored = parseFloat(storedValue);
 
+        // Determine the output
         if (operator === '+') {
             setDisplayValue((stored + currentValue).toString());
         } else if (operator === '-') {
@@ -36,6 +41,7 @@ const Calculator = () => {
         setOperator(null);
     };
 
+    // Handle clear button click 
     const handleClearClick = () => {
         setDisplayValue('0');
         setStoredValue(null);
@@ -44,8 +50,13 @@ const Calculator = () => {
 
     return (
         <div className='calculator'>
+
+            {/* Generate the display for the calculator */}
             <div className='display'>{displayValue}</div>
+            
+            {/* Generate the buttons for the calculator*/}
             <div className='buttons'>
+
                 <div className='column'>
                     <button onClick={() => handleNumberClick('7')}>7</button>
                     <button onClick={() => handleNumberClick('4')}>4</button>
